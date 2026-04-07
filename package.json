@@ -43,7 +43,7 @@
     "knip": "6.3.0",
     "lint-staged": "16.4.0",
     "syncpack": "14.3.0",
-    "turbo": "2.9.4",
+    "turbo": "2.9.5",
     "typescript": "6.0.2"
   },
   "lint-staged": {
