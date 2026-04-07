@@ -10,7 +10,7 @@
 
 Please **do not** open a public GitHub issue for security vulnerabilities.
 
-Instead, email **security@acme.dev** with:
+Instead, email **info@parallaxai.io** with:
 
 - Description of the vulnerability
 - Steps to reproduce

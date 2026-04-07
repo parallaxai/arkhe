@@ -9,10 +9,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Acme',
-    default: 'Acme',
+    template: '%s | Arkhe',
+    default: 'Arkhe',
   },
-  description: 'Documentation for Acme',
+  description: 'Documentation for Arkhe',
 };
 
 export default function Layout({ children }: LayoutProps<'/'>) {

@@ -11,6 +11,6 @@ permissions:
 jobs:
   label:
     name: Label PR
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/labeler@v6

@@ -1,4 +1,4 @@
-# @acme/monorepo
+# @arkhe/monorepo
 
 TypeScript library monorepo template using pnpm workspaces, Turborepo, tsup, Vitest, Biome, Changesets, GitHub Actions, and Fumadocs.
 
@@ -21,10 +21,10 @@ TypeScript library monorepo template using pnpm workspaces, Turborepo, tsup, Vit
 
 ```
 packages/
-  config/     @acme/config  — shared tsconfig, tsup, vitest configs (private)
-  acme/       acme    — core library (publishable)
+  config/     @arkhe/config  — shared tsconfig, tsup, vitest configs (private)
+  arkhe/       arkhe    — core library (publishable)
 apps/
-  docs/       @acme/docs    — documentation site (Fumadocs + Next.js)
+  docs/       @arkhe/docs    — documentation site (Fumadocs + Next.js)
 scripts/
   setup.mjs                 — one-time template setup
   new-package.mjs           — scaffold a new package
@@ -58,7 +58,7 @@ node scripts/setup.mjs
 
 It will prompt for:
 
-1. **Project name** — replaces `acme` across all files and renames `packages/acme/`
+1. **Project name** — replaces `arkhe` across all files and renames `packages/arkhe/`
 2. **Code owner** — sets up `CODEOWNERS` with your GitHub username or org/team
 3. **CI runner** — choose between GitHub-hosted (`ubuntu-latest`) or self-hosted
 4. **Release authentication** — choose between a Personal Access Token (`PAT_TOKEN`) or a GitHub App (`APP_ID` + `APP_PRIVATE_KEY`)
@@ -85,16 +85,16 @@ packages:
 pnpm install
 
 # Add a dependency to a specific package
-pnpm --filter acme add zod
+pnpm --filter arkhe add zod
 
 # Remove a dependency from a specific package
-pnpm --filter acme remove zod
+pnpm --filter arkhe remove zod
 
 # Add a root dev dependency
 pnpm -w add -D <package>
 
 # Run a script in a specific package
-pnpm --filter acme test
+pnpm --filter arkhe test
 ```
 
 Internal packages reference each other using the `workspace:*` protocol:
@@ -102,7 +102,7 @@ Internal packages reference each other using the `workspace:*` protocol:
 ```json
 {
   "devDependencies": {
-    "@acme/config": "workspace:*"
+    "@arkhe/config": "workspace:*"
   }
 }
 ```
@@ -211,7 +211,8 @@ Configure these in **Settings > Secrets and variables > Actions**:
 | Secret | Purpose |
 |---|---|
 | `NPM_TOKEN` | npm access token for publishing packages |
-| `PAT_TOKEN` | Personal access token — allows release commits to trigger CI workflows |
+| `APP_ID` | GitHub App ID — used to generate tokens for release commits |
+| `APP_PRIVATE_KEY` | GitHub App private key (`.pem` file contents including BEGIN/END lines) |
 
 The release workflow will fail if the required secrets are not configured.
 

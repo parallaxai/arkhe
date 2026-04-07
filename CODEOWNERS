@@ -1,15 +1,15 @@
 # Default owner for everything
-*                       <owner>
+*                       @parallaxai/core
 
 # Package libraries
-/packages/acme/         <owner>
+/packages/arkhe/         @parallaxai/core
 
 # Documentation
-/apps/docs/             <owner>
-*.md                    <owner>
+/apps/docs/             @parallaxai/core
+*.md                    @parallaxai/core
 
 # CI and infrastructure
-/.github/               <owner>
+/.github/               @parallaxai/core
 
 # Shared configuration
-/packages/config/       <owner>
+/packages/config/       @parallaxai/core

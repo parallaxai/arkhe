@@ -12,7 +12,7 @@ body:
     attributes:
       label: Package
       description: Which package is affected?
-      placeholder: 'acme or docs'
+      placeholder: 'arkhe or docs'
     validations:
       required: true
 

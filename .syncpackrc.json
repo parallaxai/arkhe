@@ -28,7 +28,7 @@
   "versionGroups": [
     {
       "label": "Use workspace protocol for internal packages",
-      "dependencies": ["@acme/*"],
+      "dependencies": ["@arkhe/*"],
       "dependencyTypes": ["prod", "dev"],
       "pinVersion": "workspace:*"
     },

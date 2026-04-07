@@ -1,8 +1,8 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 
 export const siteConfig = {
-  name: 'Acme',
-  repository: 'AcmeOrg/acme',
+  name: 'Arkhe',
+  repository: 'parallaxai/arkhe',
   branch: 'main',
 };
 

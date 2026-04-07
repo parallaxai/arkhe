@@ -1,4 +1,4 @@
-# Contributing to @acme
+# Contributing to @arkhe
 
 Thank you for your interest in contributing! This document provides guidelines and instructions for contributing to this monorepo.
 
@@ -28,7 +28,7 @@ Thank you for your interest in contributing! This document provides guidelines a
    ```
 4. Commit using [Conventional Commits](https://www.conventionalcommits.org/) format:
    ```sh
-   git commit -m "feat(acme): add string helper"
+   git commit -m "feat(arkhe): add string helper"
    ```
 5. Push your branch and open a pull request against `main`
 
@@ -40,11 +40,11 @@ Format: `type(scope): description`
 
 Types: `feat`, `fix`, `docs`, `chore`, `refactor`, `test`, `ci`, `perf`, `build`, `style`, `revert`
 
-Scopes (optional): `acme`, `docs`, `config`, `ci`
+Scopes (optional): `arkhe`, `docs`, `config`, `ci`
 
 ## Changesets
 
-If your PR changes any published package (`acme`), you must include a changeset:
+If your PR changes any published package (`arkhe`), you must include a changeset:
 
 ```sh
 pnpm changeset

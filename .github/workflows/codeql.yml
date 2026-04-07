@@ -16,7 +16,7 @@ jobs:
   analyze:
     name: Analyze
     if: github.event.repository.visibility == 'public'
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
 

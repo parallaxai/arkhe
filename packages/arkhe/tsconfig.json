@@ -1,5 +1,5 @@
 {
-  "extends": "@acme/config/tsconfig/library.json",
+  "extends": "@arkhe/config/tsconfig/library.json",
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src"

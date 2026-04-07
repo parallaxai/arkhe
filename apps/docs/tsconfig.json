@@ -1,5 +1,5 @@
 {
-  "extends": "@acme/config/tsconfig/nextjs.json",
+  "extends": "@arkhe/config/tsconfig/nextjs.json",
   "compilerOptions": {
     "incremental": true,
     "paths": {
