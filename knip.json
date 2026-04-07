@@ -1,0 +1,17 @@
+{
+  "$schema": "https://unpkg.com/knip@latest/schema.json",
+  "ignoreWorkspaces": ["packages/config"],
+  "workspaces": {
+    ".": {
+      "entry": ["scripts/*.mjs"]
+    },
+    "packages/*": {
+      "project": ["src/**/*.ts"]
+    },
+    "apps/docs": {
+      "entry": ["app/**/*.tsx", "lib/**/*.ts", "source.config.ts"],
+      "project": ["**/*.{ts,tsx}"],
+      "ignoreDependencies": ["tailwindcss"]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+# Default owner for everything
+*                       <owner>
+
+# Package libraries
+/packages/acme/         <owner>
+
+# Documentation
+/apps/docs/             <owner>
+*.md                    <owner>
+
+# CI and infrastructure
+/.github/               <owner>
+
+# Shared configuration
+/packages/config/       <owner>

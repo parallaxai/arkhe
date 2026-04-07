@@ -1,0 +1,35 @@
+{
+  "name": "@acme/docs",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "next build",
+    "clean": "rm -rf .next .source .turbo tsconfig.tsbuildinfo",
+    "dev": "next dev",
+    "postinstall": "fumadocs-mdx",
+    "start": "next start",
+    "typecheck": "fumadocs-mdx && next typegen && tsc --noEmit"
+  },
+  "dependencies": {
+    "fumadocs-core": "16.7.10",
+    "fumadocs-mdx": "14.2.11",
+    "fumadocs-ui": "16.7.10",
+    "lucide-react": "^1.7.0",
+    "next": "16.2.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tailwind-merge": "^3.4.1"
+  },
+  "devDependencies": {
+    "@acme/config": "workspace:*",
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/mdx": "^2.0.13",
+    "@types/node": "^25.5.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.2",
+    "typescript": "6.0.2"
+  }
+}

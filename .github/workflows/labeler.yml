@@ -1,0 +1,16 @@
+name: PR Labeler
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  label:
+    name: Label PR
+    runs-on: self-hosted
+    steps:
+      - uses: actions/labeler@v6

@@ -1,0 +1,21 @@
+{
+  "name": "@acme/config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./tsconfig/base.json": "./tsconfig/base.json",
+    "./tsconfig/library.json": "./tsconfig/library.json",
+    "./tsconfig/nextjs.json": "./tsconfig/nextjs.json",
+    "./tsup.config.base": "./tsup.config.base.ts",
+    "./vitest.shared": "./vitest.shared.ts"
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "tsup": "^8.0.0",
+    "vitest": "^4.0.0"
+  }
+}

@@ -1,0 +1,44 @@
+name: Documentation Issue
+description: Report incorrect, missing, or unclear documentation
+labels: ['documentation']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping us improve the docs! Please fill out the sections below.
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Issue type
+      options:
+        - Incorrect information
+        - Missing documentation
+        - Unclear or confusing
+        - Typo or formatting
+        - Broken link
+    validations:
+      required: true
+
+  - type: input
+    id: page
+    attributes:
+      label: Page or section
+      description: Which page or section is affected?
+      placeholder: 'e.g. Getting Started, API Reference, or URL'
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the issue
+      description: What is wrong or missing?
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested fix
+      description: If you have a suggestion for how to improve it, describe it here.

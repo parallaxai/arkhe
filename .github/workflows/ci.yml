@@ -1,0 +1,76 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    name: CI (Node ${{ matrix.node-version }})
+    runs-on: self-hosted
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        node-version: [22, 24]
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: pnpm/action-setup@v5
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Security audit
+        run: pnpm audit --audit-level=high
+
+      - name: Lint & format
+        run: pnpm lint
+
+      - name: Check dependency consistency
+        run: pnpm syncpack:check
+
+      - name: Check for unused code
+        run: pnpm knip
+
+      - name: Type check
+        run: pnpm turbo typecheck
+
+      - name: Test with coverage
+        run: pnpm turbo test:coverage
+
+      - name: Upload coverage reports
+        if: matrix.node-version == 22
+        uses: actions/upload-artifact@v7
+        with:
+          name: coverage-reports
+          path: packages/*/coverage/
+          retention-days: 30
+
+      - name: Build
+        run: pnpm turbo build
+
+      - name: Validate exports & package structure
+        run: pnpm turbo run check-exports
+
+      - name: Verify package contents
+        run: |
+          for pkg in packages/*/package.json; do
+            if ! grep -qE '"private"\s*:\s*true' "$pkg"; then
+              dir=$(dirname "$pkg")
+              echo "--- $dir ---"
+              (cd "$dir" && npm pack --dry-run 2>&1)
+            fi
+          done

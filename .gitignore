@@ -1,0 +1,33 @@
+node_modules/
+dist/
+.turbo/
+.next/
+.source/
+.vercel
+coverage/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.*
+
+# Lock files (pnpm only — prevent wrong lock files from other package managers)
+package-lock.json
+yarn.lock
+
+# Pack artifacts
+*.tgz
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+.idea/
+
+# Debug logs
+*.log
+
+.claude/

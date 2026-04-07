@@ -1,0 +1,41 @@
+{
+  "$schema": "https://unpkg.com/syncpack/dist/schema.json",
+  "sortFirst": [
+    "name",
+    "version",
+    "private",
+    "description",
+    "license",
+    "keywords",
+    "repository",
+    "bugs",
+    "homepage",
+    "type",
+    "main",
+    "module",
+    "types",
+    "exports",
+    "files",
+    "sideEffects",
+    "engines",
+    "packageManager",
+    "scripts",
+    "dependencies",
+    "devDependencies",
+    "peerDependencies",
+    "lint-staged"
+  ],
+  "versionGroups": [
+    {
+      "label": "Use workspace protocol for internal packages",
+      "dependencies": ["@acme/*"],
+      "dependencyTypes": ["prod", "dev"],
+      "pinVersion": "workspace:*"
+    },
+    {
+      "label": "Ignore peer dependency ranges",
+      "dependencyTypes": ["peer"],
+      "isIgnored": true
+    }
+  ]
+}

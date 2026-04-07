@@ -1,0 +1,41 @@
+packages:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'packages/!(config)/**'
+
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'apps/docs/**'
+          - '**/*.md'
+
+ci:
+  - changed-files:
+      - any-glob-to-any-file: '.github/**'
+
+config:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'packages/config/**'
+          - '**/tsconfig*.json'
+          - 'biome.json'
+          - 'turbo.json'
+          - 'knip.json'
+          - 'commitlint.config.mjs'
+          - '.syncpackrc.json'
+          - '.editorconfig'
+          - '.npmrc'
+          - '.nvmrc'
+          - '.node-version'
+          - '.gitattributes'
+          - '.husky/**'
+
+scripts:
+  - changed-files:
+      - any-glob-to-any-file: 'scripts/**'
+
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '**/package.json'
+          - 'pnpm-lock.yaml'
