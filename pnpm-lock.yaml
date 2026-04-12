@@ -28,6 +28,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 20.5.0
         version: 20.5.0
+      expect-type:
+        specifier: ^1.3.0
+        version: 1.3.0
       husky:
         specifier: 9.1.7
         version: 9.1.7
