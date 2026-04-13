@@ -34,17 +34,17 @@
     "version-packages": "changeset version"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.4.10",
+    "@biomejs/biome": "2.4.11",
     "@changesets/changelog-github": "^0.6.0",
     "@changesets/cli": "2.30.0",
     "@commitlint/cli": "20.5.0",
     "@commitlint/config-conventional": "20.5.0",
     "expect-type": "^1.3.0",
     "husky": "9.1.7",
-    "knip": "6.3.0",
+    "knip": "6.4.1",
     "lint-staged": "16.4.0",
     "syncpack": "14.3.0",
-    "turbo": "2.9.5",
+    "turbo": "2.9.6",
     "typescript": "6.0.2"
   },
   "lint-staged": {
