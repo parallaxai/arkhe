@@ -507,6 +507,16 @@ describe('types', () => {
       expectTypeOf(Some(42)).toEqualTypeOf<Maybe<number>>();
     });
 
+    it('Some() rejects null', () => {
+      // @ts-expect-error — null is not assignable to {}
+      Some(null);
+    });
+
+    it('Some() rejects undefined', () => {
+      // @ts-expect-error — undefined is not assignable to {}
+      Some(undefined);
+    });
+
     it('None() helper matches Maybe.none', () => {
       expectTypeOf(None()).toEqualTypeOf<Maybe<never>>();
       expectTypeOf(None<string>()).toEqualTypeOf<Maybe<string>>();
