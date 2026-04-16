@@ -1,5 +1,0 @@
----
-"arkhe": patch
----
-
-Removed boilerplate
